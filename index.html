@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
@@ -48,6 +50,10 @@ body {
 .section {
 margin-bottom: 100px;
 }
+#contact_form{
+  padding: 20px;
+  margin: 10px;
+}
 
 
 
@@ -75,6 +81,16 @@ margin-bottom: 100px;
 .menue{
   text-align: center;
    
+}
+.ContactUs{
+  background:linear-gradient(to right, rgb(207, 180, 184), grey);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left:110px;
+  margin-right:110px;
+}
+.form{
+  text-align: center;
 }
 </style>
 </head>
@@ -125,6 +141,39 @@ margin-bottom: 100px;
   
   
 </div>
+<h1 class="form">Contact Form</h1>
+<div class="ContactUs">
+<form id="contact_form" name="contact_form" method="post">
+    <div class="mb-3 row">
+        <div class="col">
+            <label>First Name</label>
+            <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
+        </div>
+        <div class="col">
+            <label>Last Name</label>
+            <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col">
+            <label for="email_addr">Email address</label>
+            <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                placeholder="name@example.com">
+        </div>
+        <div class="col">
+            <label for="phone_input">Phone</label>
+            <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                placeholder="Phone">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary px-4 btn-lg">Post</button>
+</form>
+</div>
+
 
 <script>
 function myFunction() {
